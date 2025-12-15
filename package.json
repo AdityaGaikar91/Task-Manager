@@ -1,0 +1,15 @@
+{
+    "name": "primetrade-ai",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "install-client": "cd client && npm install",
+        "install-server": "cd server && npm install",
+        "build-client": "cd client && npm run build",
+        "build": "npm run install-client && npm run build-client",
+        "postinstall": "npm run install-server"
+    },
+    "engines": {
+        "node": ">=18.x"
+    }
+}
