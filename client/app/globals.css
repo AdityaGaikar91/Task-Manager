@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary: #64748b;
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+}
+
+body {
+  color: var(--text-main);
+  background-color: var(--background);
+  background-image: radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Custom Components */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-sm focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500 shadow-indigo-500/20;
+}
+
+.btn-secondary {
+  @apply bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 focus:ring-slate-500;
+}
+
+.card {
+  @apply bg-white/90 backdrop-blur-sm rounded-xl border border-white/20 shadow-xl p-6;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 rounded-lg border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all;
+}
